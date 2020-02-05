@@ -1,0 +1,38 @@
+﻿@model IList<TruckControl.Models.TruckViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <dd class="col-sm-10">
+        <table class="table">
+            <tr>
+                <th>Truck Id</th>
+                <th>Truck Name</th>
+                <th>Model Name</th>
+                <th>Model Year</th>
+                <th>Production Year</th>
+            </tr>
+            @foreach (var truck in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => truck.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => truck.TruckName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => truck.TruckModelName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => truck.ModelYear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => truck.ProductionYear)
+                    </td>
+                </tr>
+            }
+        </table>
+    </dd>
+</div>
