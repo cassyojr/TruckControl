@@ -6,7 +6,7 @@ Simple project to use DDD pattern as example.
 
 Download or clone the project 
 
-Make sure that you have the .\SQLEXPRESS on your local machine, or change the "appsettings.json" file on the "Infrastructure" project to point to your SQL Server host.
+*Note: Make sure that you have the .\SQLEXPRESS on your local machine, or change the "appsettings.json" file on the "Infrastructure" project to point to your SQL Server host.*
 
 Open the project on VS Code or Visual Studio 2019
 
@@ -19,8 +19,8 @@ dotnet run or press F5 on the TruckControl presentation project
 
 Open the browser on http://localhost:5000
 
-Note: If the project don't run with bash "dotnet run", check if the path of the Package Manager Console 
-is pointing to the TruckControl presentation project.
+*Note: If the project don't run with bash "dotnet run", check if the path of the Package Manager Console 
+is pointing to the TruckControl presentation project.*
 
 ## Usage
 
