@@ -21,12 +21,10 @@ namespace Infrastructure.Repository
         public virtual async Task<TEntity> AddAsync(TEntity obj)
         {
             var entryEntity = await DbSet.AddAsync(obj);
-            return entryEntity.Entity;
-        }
 
-        public virtual async Task AddRangeAsync(IEnumerable<TEntity> entities)
-        {
-            await DbSet.AddRangeAsync(entities);
+            await _unitOfWork.Context.SaveChangesAsync();
+
+            return entryEntity.Entity;
         }
 
         public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -39,35 +37,29 @@ namespace Infrastructure.Repository
             return await DbSet.FindAsync(id);
         }
 
-        public virtual async Task RemoveAsync(object id)
+        public virtual async Task DeleteAsync(object id)
         {
             var entity = await GetByIdAsync(id);
 
-            if (entity == null) return;
+            if (entity == null) throw new ArgumentException("Invalid object id");
 
-            Remove(entity);
+            Delete(entity);
+
+            await _unitOfWork.Context.SaveChangesAsync();
         }
 
-        public virtual TEntity Remove(TEntity obj)
+        public virtual TEntity Delete(TEntity obj)
         {
             DbSet.Remove(obj);
             return obj;
         }
 
-        public virtual void RemoveRange(IEnumerable<TEntity> entities)
-        {
-            DbSet.RemoveRange(entities);
-        }
-
-        public virtual TEntity Update(TEntity obj)
+        public virtual async Task<TEntity> UpdateAsync(TEntity obj)
         {
             _unitOfWork.Context.Entry(obj).State = EntityState.Modified;
-            return obj;
-        }
+            await _unitOfWork.Context.SaveChangesAsync();
 
-        public virtual void UpdateRange(IEnumerable<TEntity> entities)
-        {
-            DbSet.UpdateRange(entities);
+            return obj;
         }
 
         public void Dispose()

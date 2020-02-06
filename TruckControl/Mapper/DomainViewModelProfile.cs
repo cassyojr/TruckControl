@@ -12,6 +12,10 @@ namespace TruckControl.Mapper
                 .ForMember(x => x.Id, opt => opt.MapFrom(x => x.TruckId))
                 .ForMember(x => x.TruckName, opt => opt.MapFrom(x => x.Name))
                 .ForMember(x => x.TruckModelName, opt => opt.MapFrom(x => x.TruckModel.Name));
+
+            CreateMap<Truck, RegisterTruckViewModel>()
+                .ForMember(x => x.Id, opt => opt.MapFrom(x => x.TruckId))
+                .ForMember(x => x.TruckName, opt => opt.MapFrom(x => x.Name));
         }
     }
 }

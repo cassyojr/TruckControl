@@ -10,6 +10,7 @@ namespace TruckControl.Mapper
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new DomainViewModelProfile());
+                mc.AddProfile(new ViewModelDomainProfile());
             });
 
             var mapper = mappingConfig.CreateMapper();

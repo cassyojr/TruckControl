@@ -9,7 +9,6 @@ namespace Infrastructure.Repository.UnitOfWork
         ApplicationContext Context { get; }
         void BeginTransaction();
         Task<int> CommitAsync();
-        Task<int> SaveChangesAsync();
         void Rollback();
     }
 }

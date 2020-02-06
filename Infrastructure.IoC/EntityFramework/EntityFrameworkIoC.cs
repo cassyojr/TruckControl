@@ -23,6 +23,7 @@ namespace Infrastructure.IoC.EntityFramework
             services.AddScoped<IApplicationContext, ApplicationContext>();
             services.AddScoped(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
             services.AddScoped<ITruckRepository, TruckRepository>();
+            services.AddScoped<ITruckModelRepository, TruckModelRepository>();
 
             return services;
         }

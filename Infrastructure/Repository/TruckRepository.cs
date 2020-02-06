@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Infrastructure.Interfaces.Repository;
@@ -17,6 +18,7 @@ namespace Infrastructure.Repository
         {
             return await _unitOfWork.Context.Truck
                 .Include(x => x.TruckModel)
+                .OrderByDescending(x => x.TruckId)
                 .ToListAsync();
         }
     }

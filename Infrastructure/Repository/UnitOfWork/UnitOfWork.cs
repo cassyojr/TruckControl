@@ -27,7 +27,7 @@ namespace Infrastructure.Repository.UnitOfWork
 
             try
             {
-                affectedRows = await SaveChangesAsync();
+                affectedRows = await Context.SaveChangesAsync();
 
                 if (_transaction != null) _transaction.Commit();
 
@@ -58,11 +58,6 @@ namespace Infrastructure.Repository.UnitOfWork
         {
             _transaction.Rollback();
             _transaction.Dispose();
-        }
-
-        public async Task<int> SaveChangesAsync()
-        {
-            return await Context.SaveChangesAsync();
         }
     }
 }
