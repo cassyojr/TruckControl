@@ -6,6 +6,8 @@ Simple project to use DDD pattern as example.
 
 Download or clone the project 
 
+Make sure that you have the .\SQLEXPRESS on your local machine, or change the "appsettings.json" file on the "Infrastructure" project to point to your SQL Server host.
+
 Open the project on VS Code or Visual Studio 2019
 
 Use Nuget Package Manager Console
@@ -22,8 +24,7 @@ is pointing to the TruckControl presentation project.
 
 ## Usage
 
-When you run the project the database will be automatically created with some seed value.
-      
+When you run the project the database will be automatically created with some seed value.   
 
 ## Contributing
 Pull requests are welcome. 
