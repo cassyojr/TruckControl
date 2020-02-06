@@ -15,6 +15,8 @@ dotnet restore
 dotnet run or press F5 on the TruckControl presentation project
 ```
 
+Open the browser on http://localhost:5000
+
 Note: If the project don't run with bash "dotnet run", check if the path of the Package Manager Console 
 is pointing to the TruckControl presentation project.
 
