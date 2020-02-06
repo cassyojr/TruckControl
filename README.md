@@ -4,6 +4,8 @@ Simple project to use DDD pattern as example.
 
 ## Installation
 
+Install .Net Core version 3.1 on your computer
+
 Download or clone the project 
 
 *Note: Make sure that you have the .\SQLEXPRESS on your local machine, or change the "appsettings.json" file on the "Infrastructure" project to point to your SQL Server host.*
