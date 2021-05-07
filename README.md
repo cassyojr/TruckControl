@@ -8,7 +8,7 @@ Install .Net Core version 3.1 on your computer
 
 Download or clone the project 
 
-*Note: Make sure that you have the .\SQLEXPRESS on your local machine, or change the "appsettings.json" file on the "Infrastructure" project to point to your SQL Server host.*
+*Note: Make sure that you have the Sql Server installed on your local machine with a database created named 'TruckControlDb' or change the "appsettings.json" file on the project to point to your SQL Server host and database with the correct connection string.*
 
 Open the project on VS Code or Visual Studio 2019
 
