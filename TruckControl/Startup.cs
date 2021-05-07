@@ -1,5 +1,5 @@
 using Application.IoC.Services;
-using Infrastructure.Interfaces.Context;
+using Infrastructure.Context;
 using Infrastructure.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

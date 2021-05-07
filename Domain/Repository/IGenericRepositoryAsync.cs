@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Interfaces.Repository
+namespace Domain.Repository
 {
     public interface IGenericRepositoryAsync<TEntity> : IDisposable where TEntity : class
     {

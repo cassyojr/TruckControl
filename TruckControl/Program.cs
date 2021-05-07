@@ -16,11 +16,7 @@ namespace TruckControl
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
-                    var env = hostingContext.HostingEnvironment;
-                    var infrastructure = Path.Combine(env.ContentRootPath, "..", "Infrastructure");
-
-                    config
-                        .AddJsonFile(Path.Combine(infrastructure, $"appsettings.json"), optional: false, reloadOnChange: true);
+                    config.AddJsonFile($"appsettings.json", optional: false, reloadOnChange: true);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

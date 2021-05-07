@@ -1,4 +1,4 @@
-﻿using Infrastructure.Interfaces.Repository;
+﻿using Domain.Repository;
 using Infrastructure.Repository.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using System;

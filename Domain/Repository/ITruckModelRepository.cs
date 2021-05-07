@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 
-namespace Infrastructure.Interfaces.Repository
+namespace Domain.Repository
 {
     public interface ITruckModelRepository : IGenericRepositoryAsync<TruckModel>
     {

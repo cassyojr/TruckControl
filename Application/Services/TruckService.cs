@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Domain.Entities;
+using Domain.Repository;
+using Domain.Services;
+using Infrastructure.Repository.UnitOfWork;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.Interfaces.Services;
-using Domain.Entities;
-using Infrastructure.Interfaces.Repository;
-using Infrastructure.Repository.UnitOfWork;
 
 namespace Application.Services
 {

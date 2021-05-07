@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application.Interfaces\Application.Interfaces.csproj" />
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 

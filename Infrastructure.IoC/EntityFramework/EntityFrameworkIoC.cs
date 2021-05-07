@@ -1,7 +1,6 @@
-﻿using Infrastructure.Context;
+﻿using Domain.Repository;
+using Infrastructure.Context;
 using Infrastructure.DbConfig;
-using Infrastructure.Interfaces.Context;
-using Infrastructure.Interfaces.Repository;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

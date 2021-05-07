@@ -1,6 +1,4 @@
-﻿using Infrastructure.Interfaces.DbConfig;
-
-namespace Infrastructure.DbConfig
+﻿namespace Infrastructure.DbConfig
 {
     public class ConnectionStrings : IConnectionStrings
     {

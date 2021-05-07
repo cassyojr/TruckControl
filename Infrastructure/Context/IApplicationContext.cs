@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Interfaces.Context
+﻿namespace Infrastructure.Context
 {
     public interface IApplicationContext
     {

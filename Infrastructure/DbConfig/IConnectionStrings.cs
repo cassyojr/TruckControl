@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Interfaces.DbConfig
+﻿namespace Infrastructure.DbConfig
 {
     public interface IConnectionStrings
     {

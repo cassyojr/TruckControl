@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
-using Infrastructure.Interfaces.Repository;
+using Domain.Repository;
 using Infrastructure.Repository.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 

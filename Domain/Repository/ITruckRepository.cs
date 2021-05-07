@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Domain.Entities;
 
-namespace Infrastructure.Interfaces.Repository
+namespace Domain.Repository
 {
     public interface ITruckRepository : IGenericRepositoryAsync<Truck>
     {
